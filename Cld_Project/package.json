@@ -1,0 +1,30 @@
+{
+  "name": "cloud-carbon-compass",
+  "version": "1.0.0",
+  "description": "Cloud Carbon Compass - Cloud workload carbon emissions estimator and interactive green optimizer",
+  "main": "server/index.js",
+  "scripts": {
+    "postinstall": "npm run install-deps",
+    "install-deps": "npm --prefix server install && npm --prefix client install",
+    "dev": "npx concurrently -n \"SERVER,CLIENT\" -c \"cyan.bold,green.bold\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "start": "npm run dev",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "build": "npm --prefix client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "cloud",
+    "carbon",
+    "sustainability",
+    "green-cloud",
+    "aws",
+    "azure",
+    "gcp",
+    "dashboard"
+  ],
+  "author": "",
+  "license": "MIT"
+}
